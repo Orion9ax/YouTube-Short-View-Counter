@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts View Counter",
+  "version": "1.0",
+  "description": "Adds a viewed counter to YouTube Shorts.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "e.png",
+      "48": "e.png",
+      "128": "e.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/shorts/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "e.png",
+    "48": "e.png",
+    "128": "e.png"
+  }
+}
+
